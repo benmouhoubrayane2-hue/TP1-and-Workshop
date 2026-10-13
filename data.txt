@@ -1,1 +1,1 @@
-salam
+Python is a powerful programming language! Python is widely used for data analysis, web development, and automation. Programming in Python is fun, and learning Python opens many opportunities for computer science students. Data analysis and web development are essential skills.
