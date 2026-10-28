@@ -31,3 +31,9 @@ MONSTER_HEIGHT = 72
 MONSTER_SPEED = 140        # slower than the player, so you can escape
 MONSTER_HEALTH = 30
 MONSTER_IMAGE = "monster.png"
+# Bullet (magic bolt)
+BULLET_SPEED = 600         # pixels per second
+BULLET_DAMAGE = 10         # a monster (30 HP) needs 3 hits
+BULLET_RADIUS = 6
+BULLET_COLOR = (120, 240, 255)
+FIRE_COOLDOWN = 0.25       # seconds between two shots
