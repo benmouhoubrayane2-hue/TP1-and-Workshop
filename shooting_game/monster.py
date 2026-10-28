@@ -1,8 +1,6 @@
-"""Monster: spawns at the top of the screen and chases its target."""
-import random
-
+"""Monster: spawns at the top of the arena and chases its target."""
 from character import Character
-from settings import (WIDTH, MONSTER_WIDTH, MONSTER_HEIGHT, MONSTER_SPEED,
+from settings import (MONSTER_WIDTH, MONSTER_HEIGHT, MONSTER_SPEED,
                       MONSTER_HEALTH, MONSTER_IMAGE)
 
 
@@ -16,10 +14,10 @@ class Monster(Character):
         self.attack_type = "contact"       # hurts the player by touching them
 
     @classmethod
-    def spawn_random(cls, target):
-        """Create a monster at a random place along the top of the screen."""
-        x = random.randint(MONSTER_WIDTH, WIDTH - MONSTER_WIDTH)
-        return cls(x, MONSTER_HEIGHT, target)
+    def spawn_random(cls, board, target):
+        """Create a monster at a random place along the top of the board."""
+        pos = board.random_top_position(margin=MONSTER_WIDTH)
+        return cls(pos.x, pos.y, target)
 
     def update(self, dt):
         """Walk towards the target; stop when on top of it."""

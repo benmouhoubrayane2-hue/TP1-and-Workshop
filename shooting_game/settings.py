@@ -7,7 +7,16 @@ TITLE = "Wizard vs Monsters"
 FPS = 60
 
 # Colors (R, G, B)
-BG_COLOR = (18, 20, 30)
+BG_COLOR = (12, 13, 20)          # around the board
+
+# Game board (the arena)
+BOARD_MARGIN = 20                # space between the window edge and the arena (px)
+TILE_SIZE = 64                   # size of one floor tile (px)
+TILE_COLOR_A = (30, 33, 48)      # floor tiles alternate between these two colours
+TILE_COLOR_B = (26, 29, 42)
+TILE_LINE_COLOR = (38, 42, 60)   # thin lines between tiles
+BORDER_COLOR = (130, 100, 220)   # magic purple frame
+BORDER_WIDTH = 4
 
 # Player
 PLAYER_WIDTH = 72          # size of the wizard on screen (px)

@@ -1,6 +1,7 @@
 """Entry point of the 2D shooting game."""
 import pygame
 from settings import WIDTH, HEIGHT, TITLE, FPS, BG_COLOR
+from board import GameBoard
 from player import Player
 from monster import Monster
 
@@ -16,8 +17,9 @@ class Game:
         self.running = True
 
         # Game objects
-        self.player = Player(WIDTH / 2, HEIGHT - 80)
-        self.monster = Monster.spawn_random(target=self.player)
+        self.board = GameBoard(WIDTH, HEIGHT)
+        self.player = Player(self.board)
+        self.monster = Monster.spawn_random(self.board, target=self.player)
         self.all_sprites = pygame.sprite.Group(self.player, self.monster)
 
     def run(self):
@@ -49,8 +51,9 @@ class Game:
         self.all_sprites.update(dt)
 
     def draw(self):
-        """View: clear the screen, draw everything, then show the frame."""
+        """View: board first, then every sprite on top, then show the frame."""
         self.screen.fill(BG_COLOR)
+        self.board.draw(self.screen)
         self.all_sprites.draw(self.screen)
         pygame.display.flip()
 
