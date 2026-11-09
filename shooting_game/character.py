@@ -1,5 +1,6 @@
 """Abstract base class for living objects: they have health and can be hurt."""
 from game_object import GameObject
+from health import Health
 
 
 class Character(GameObject):
@@ -7,22 +8,25 @@ class Character(GameObject):
 
     def __init__(self, x, y, speed, image, max_health):
         super().__init__(x, y, speed, image)
-        self._max_health = max_health      # "_" = protected: not changed from outside
-        self._health = max_health
+        self._health = Health(max_health)    # the health rules live in their own class
 
     @property
     def health(self):
         """Read-only access to the current health."""
-        return self._health
+        return self._health.current
 
     @property
     def max_health(self):
-        return self._max_health
+        return self._health.maximum
+
+    @property
+    def health_ratio(self):
+        return self._health.ratio
 
     @property
     def is_alive(self):
-        return self._health > 0
+        return not self._health.is_empty
 
     def take_damage(self, amount):
         """The only way to lower health: it can never go below 0."""
-        self._health = max(0, self._health - amount)
+        self._health.take_damage(amount)
