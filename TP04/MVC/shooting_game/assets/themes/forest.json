@@ -1,0 +1,35 @@
+{
+  "name": "Forest",
+  "background": "backgrounds/forest.png",
+  "background_color": [
+    22,
+    40,
+    24
+  ],
+  "border_color": [
+    150,
+    110,
+    60
+  ],
+  "images": {
+    "player": "player/druid.png",
+    "monster": "monsters/monster.png",
+    "monster_fast": "monsters/monster_fast.png",
+    "monster_strong": "monsters/monster_strong.png",
+    "monster_flying": "monsters/monster_flying.png",
+    "monster_immobile": "monsters/monster_immobile.png",
+    "monster_turret": "monsters/monster_turret.png",
+    "monster_shielded": "monsters/monster_shielded.png",
+    "magic_bolt": "bullets/leaf.png",
+    "fireball": "bullets/ember.png",
+    "enemy_bolt": "bullets/enemy_bolt.png"
+  },
+  "sounds": {
+    "shot": "sounds/leaf.wav",
+    "shot_fireball": "sounds/fireball.wav",
+    "hit": "sounds/hit.wav",
+    "hurt": "sounds/hurt.wav",
+    "defeated": "sounds/defeated.wav",
+    "game_over": "sounds/game_over.wav"
+  }
+}

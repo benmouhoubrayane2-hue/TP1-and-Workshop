@@ -1,0 +1,30 @@
+{
+  "name": "Cave",
+  "title": "Crystal Hunt",
+  "background": "backgrounds/dungeon.png",
+  "background_color": [
+    10,
+    14,
+    26
+  ],
+  "border_color": [
+    90,
+    200,
+    250
+  ],
+  "images": {
+    "player": "player/wizard.png",
+    "crystal": "items/crystal.png",
+    "rock": "items/rock.png",
+    "magic_bolt": "bullets/magic_bolt.png",
+    "fireball": "bullets/fireball.png"
+  },
+  "sounds": {
+    "shot": "sounds/shoot.wav",
+    "shot_fireball": "sounds/fireball.wav",
+    "hurt": "sounds/hurt.wav",
+    "defeated": "sounds/hit.wav",
+    "game_over": "sounds/game_over.wav",
+    "collected": "sounds/collect.wav"
+  }
+}
