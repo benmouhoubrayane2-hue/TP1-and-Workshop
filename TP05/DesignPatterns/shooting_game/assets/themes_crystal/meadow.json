@@ -1,0 +1,30 @@
+{
+  "name": "Meadow",
+  "title": "Crystal Hunt",
+  "background": "backgrounds/forest.png",
+  "background_color": [
+    22,
+    40,
+    24
+  ],
+  "border_color": [
+    240,
+    200,
+    80
+  ],
+  "images": {
+    "player": "player/druid.png",
+    "crystal": "items/crystal.png",
+    "rock": "items/rock.png",
+    "magic_bolt": "bullets/leaf.png",
+    "fireball": "bullets/ember.png"
+  },
+  "sounds": {
+    "shot": "sounds/leaf.wav",
+    "shot_fireball": "sounds/fireball.wav",
+    "hurt": "sounds/hurt.wav",
+    "defeated": "sounds/hit.wav",
+    "game_over": "sounds/game_over.wav",
+    "collected": "sounds/collect.wav"
+  }
+}
